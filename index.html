@@ -15,10 +15,10 @@
     <title>Prenota il tuo Biglietto</title>
 </head>
 
-<body>
+<body class="bg-color-rn">
 
-    <main class="bg-color-rn">
-        <section class="bg-color-rn-w container-lg flex-column justify-content-center  align-items-center">
+    <main>
+        <section class="bg-color-rn-w container-lg flex-column justify-content-center  align-items-center my-5">
             <div class="py-5 text-center">
                 <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
             </div>
@@ -46,6 +46,25 @@
             </div>
             <div class="text-center py-5">
                 <button type="button" onclick="myFunction()">Genera</button>
+                <button type="button" onclick="myFunctionAnnul()">Annulla</button>
+            </div>
+        </section>
+        <section class="bg-color-rn-w container-lg my-5">
+            <div class="col-4">
+                <h2>DETTAGLIO PASSEGGERI</h2>
+                <div class="bg-color-rn-grey">
+                    <div>
+                        <h3>Nome Passeggero</h3>
+                    </div>
+                    <div class="nome-pass"></div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </section>
     </main>
