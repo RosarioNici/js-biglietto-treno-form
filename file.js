@@ -18,7 +18,8 @@ messageHTMLAge.innerHTML = agePasseger;
 
 // Calcolo prezzo bilgietto
 const priceKm = 0.21
-let distanceKM = document.getElementById("distance")
+let distanceKM = document.getElementById("distance").value;
+console.log(distanceKM)
 var priceTiket = (Number(distanceKM)) * priceKm
 // calcolo sconto
 
