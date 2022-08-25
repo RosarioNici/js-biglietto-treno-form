@@ -17,7 +17,7 @@
 
 <body class="bg-color-rn">
 
-    <main>
+    <main class="flex-column justify-content-center align-items-center">
         <section class="bg-color-rn-w container-lg flex-column justify-content-center  align-items-center my-5">
             <div class="py-5 text-center">
                 <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
@@ -49,9 +49,10 @@
                 <button type="button" onclick="myFunctionAnnul()">Annulla</button>
             </div>
         </section>
-        <section class="bg-color-rn-w container-lg my-5">
-            <div class="col-4">
-                <h2>DETTAGLIO PASSEGGERI</h2>
+        <section class="bg-color-rn-w container-lg my-5 row">
+
+            <div class="col-6">
+
                 <div class="bg-color-rn-grey">
                     <div>
                         <h3>Nome Passeggero</h3>
@@ -60,11 +61,22 @@
                 </div>
             </div>
 
-            <div class="col-4">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+            <div class="col-6 row">
+                <div class="col-3">
+                    <h4>Offerta</h4>
+                    <div class="type-tiket"></div>
+                </div>
+
+                <div class="col-3">
+                    <h4>Carrozza</h4>
+                    <div class="vagon"></div>
+                </div>
+                <div class="col-3">
+                    <h4>N°Biglietto</h4>
+                </div>
+                <div class="col-3">
+                    <h4>Prezzo</h4>
+                </div>
             </div>
         </section>
     </main>

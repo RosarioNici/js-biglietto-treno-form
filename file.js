@@ -3,6 +3,8 @@ const messageHTMLName = document.querySelector(".message-js-one");
 const messageHTMLKm = document.querySelector(".message-js-two");
 const messageHTMLAge = document.querySelector(".message-js-three")
 const messageHTMLNameTiket = document.querySelector(".nome-pass")
+const selectHTMLValueAge = document.getElementById("inputAge")
+
 // Nome passeggero
 const namePass = ("Nome Cognome");
 messageHTMLName.innerHTML = namePass;
@@ -18,38 +20,36 @@ const agePasseger = ("Età")
 messageHTMLAge.innerHTML = agePasseger;
 
 // Calcolo prezzo bilgietto
-
-
+const selectInputAge = selectHTMLValueAge.value
 
 function myFunction() {
-    const priceKm = 0.21
     let distanceKM = document.getElementById("distance").value;
-    console.log(distanceKM)
     let priceTiket = 0.21 * (Number(distanceKM));
+
     // calcolo sconto
-    var agePassegerMin = document.getElementById("minorenne").value;
-    console.log(agePassegerMin)
-    let discount = (priceTiket / 100) * 20;
-    let priceTiketDiscount = priceTiket - discount;
-    priceTiket = priceTiketDiscount.toFixed(2);
-    var agePassegerOve = document.getElementById("over-65").value;
-    console.log(agePassegerOve)
 
-
-    if (agePassegerMin === agePassegerMin) {
-
-
-    } else if (agePassegerCalc = document.getElementById("over-65").value) {
-        let OverDiscount = (priceTiket / 100) * 40;
-        let priceTiketDiscountOv = priceTiket - OverDiscount;
-        priceTiket = priceTiketDiscountOv.toFixed(2);
-
+    if ((selectInputAge == "minorenne")) {
+        let discount = (priceTiket / 100) * 20;
+        let priceTiketDiscount = priceTiket - discount
+        priceTiket = priceTiketDiscount.toFixed(2)
     }
+    if ((selectInputAge == "over-65")) {
+        let OverDiscount = (priceTiket / 100) * 40;
+        let priceTiketDiscountOv = priceTiket - OverDiscount
+        priceTiket = priceTiketDiscountOv.toFixed(2)
+    }
+    console.log(priceTiket)
+
     // compilazione biglietto
-    var nameTiket = document.getElementById("name")
+    var nameTiket = document.getElementById("name").value
     const nomePasseggero = nameTiket
     messageHTMLNameTiket.innerHTML = nomePasseggero
-    console.log(priceTiket)
+
+
+
+
+
+
 }
 function myFunctionAnnul() {
 
