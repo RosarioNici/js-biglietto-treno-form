@@ -3,7 +3,7 @@ const messageHTMLName = document.querySelector(".message-js-one");
 const messageHTMLKm = document.querySelector(".message-js-two");
 const messageHTMLAge = document.querySelector(".message-js-three")
 const messageHTMLNameTiket = document.querySelector(".nome-pass")
-const selectHTMLValueAge = document.getElementById("inputAge")
+
 
 // Nome passeggero
 const namePass = ("Nome Cognome");
@@ -19,39 +19,40 @@ messageHTMLKm.innerHTML = distance;
 const agePasseger = ("Età")
 messageHTMLAge.innerHTML = agePasseger;
 
+// Nome sul biglietto
+const namePassTiket = document.getElementById("name").value
+messageHTMLNameTiket.innerHTML = namePassTiket
+
 // Calcolo prezzo bilgietto
-const selectInputAge = selectHTMLValueAge.value
+
 
 function myFunction() {
-    let distanceKM = document.getElementById("distance").value;
-    let priceTiket = 0.21 * (Number(distanceKM));
+    const namePassTiket = document.getElementById("name").value
+    messageHTMLNameTiket.innerHTML = namePassTiket
 
-    // calcolo sconto
+    const distanceKm = document.getElementById('distance').value;
+    const distance = distanceKm;
+    console.log(distance)
 
-    if ((selectInputAge == "minorenne")) {
-        let discount = (priceTiket / 100) * 20;
-        let priceTiketDiscount = priceTiket - discount
-        priceTiket = priceTiketDiscount.toFixed(2)
-    }
-    if ((selectInputAge == "over-65")) {
-        let OverDiscount = (priceTiket / 100) * 40;
-        let priceTiketDiscountOv = priceTiket - OverDiscount
-        priceTiket = priceTiketDiscountOv.toFixed(2)
-    }
+    var priceTiket = 0.21 * (Number(distance))
     console.log(priceTiket)
+    // Qual'è l'età del passeggero?
+    const inputAgeHTMLElement = document.getElementById('inputAge')
+    const valueAgePass = inputAgeHTMLElement.value;
+    let discount
+    switch (valueAgePass) {
 
-    // compilazione biglietto
-    var nameTiket = document.getElementById("name").value
-    const nomePasseggero = nameTiket
-    messageHTMLNameTiket.innerHTML = nomePasseggero
-
-
-
-
-
-
-}
-function myFunctionAnnul() {
+        case "minorenne": {
+            discount = (priceTiket / 100) * 20;
+            priceTiket = priceTiket - discount
+            break
+        }
+        case "over-65": {
+            discount = (priceTiket / 100) * 40;
+            priceTiket = priceTiket - discount
+            break
+        }
+    }
 
 }
 
